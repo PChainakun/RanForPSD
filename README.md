@@ -13,13 +13,14 @@ The simulated PSD data are rebinned so that their frequency range and bin-size a
 
 # Required files
 - "RandForPSD.ipynb" in the main repository directory
-- Observed PSD data that we want to predict the coronal height
-- Pre-computed IR functions (e.g., from KYNxilrev model)
+- observed PSD data that we want to predict the coronal height
+- pre-computed IR functions (e.g., from KYNxilrev model)
 
 # ML Algorithms
 - sklearn.ensemble.RandomForestRegressor (RFR algorithm)
 - sklearn.model_selection.GridSearchCV (cross-validation)
 
 # Outputs
+It will print the report on the total number of the simulated PSD profiles (with plots of all PSD) and the best MP and NE, the accuracy score for training/validating and test set, and the predicted coronal height 
 
 # Current version of the RanForPSD model
