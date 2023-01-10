@@ -12,13 +12,12 @@ RanForPSD model is a Random Forest Regressor (RFR) model for mapping the X-ray c
 The simulated PSD data are rebinned so that their frequency range and bin-size are matched with the observed PSD profile. Then, they are split into the training and test dataset. The model is trained and validated via the K-fold cross-validation process to fine-tune two RFR hyperparameters including the maximum depth (MP) and the number of estimators (NE). The developed model with the best MP and NE is then used to predict the coronal height from the observed PSD data.
 
 # Required files
-- "code-RandForPSD.ipynb" in the main repository directory
+- "RandForPSD.ipynb" in the main repository directory
 - Observed PSD data that we want to predict the coronal height
 - Pre-computed IR functions (e.g., from KYNxilrev model)
 
-# algorithms
-- 
-
-
+# ML Algorithms
+- sklearn.ensemble.RandomForestRegressor (RFR algorithm)
+- sklearn.model_selection.GridSearchCV (cross-validation)
 
 # Current version of the RanForPSD modell
