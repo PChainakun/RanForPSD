@@ -20,4 +20,4 @@ The simulated PSD data are rebinned so that their frequency range and bin-size a
 - sklearn.ensemble.RandomForestRegressor (RFR algorithm)
 - sklearn.model_selection.GridSearchCV (cross-validation)
 
-# Current version of the RanForPSD modell
+# Current version of the RanForPSD model
