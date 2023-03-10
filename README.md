@@ -14,7 +14,7 @@ The simulated PSD data are rebinned so that their frequency range and bin-size a
 # Required files
 - "RFR_model" in the main repository directory
 - observed PSD data to predict the coronal height
-- pre-computed IR functions (e.g., from KYNxilrev model) - Note that the response functions provided in this GitHub is computed using the BH mass of 10^6 solar masses, the black hole spin a = 0.998 and the inclination i = 45 degrees.
+- pre-computed IR functions (e.g., from KYNxilrev model) - Note that the response functions provided in this GitHub were computed using the BH mass of 10^6 solar masses, the black hole spin a = 0.998 and the inclination i = 45 degrees.
 
 # ML Algorithms
 - sklearn.ensemble.RandomForestRegressor (RFR algorithm)
