@@ -25,4 +25,5 @@ It will print the report on the total number of the simulated PSD profiles (with
 
 # Current version of the RFR model
 - black hole mass, spin and inclination are fixed at the values used to compute the IR
+- In the code, some parameters are needed to be specified...
 - If the assumed AGN mass (M_BH_AGN) is different from the mass used to calculate the IR (M_BH_response), it will systematically shift the PSD profiles to higher or lower frequencies with the mass fraction defined as (M_BH_AGN)/(M_BH_response) 
