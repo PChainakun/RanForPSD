@@ -15,10 +15,14 @@ import glob
 sh = '0023', '0040', '0060', '0080', '0100','0120','0140','0160','0180','0200','0220','0240','0260','0280', '0300'  # (real height * 100) as in the kynxilrev filename
 h_label= [2.3, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28, 30]    # labelled coronal height
 re_frac = [0.6, 0.8, 1, 1.2, 1.4, 1.6]      # reflection fraction
+M_BH_AGN = 2*(10**6)                        # define the BH mass of AGN
+M_BH_response = 1*(10**6)                   # define the BH mass for the response functions
 se_t = 40                                   # number of the psd index to vary
 PSD_index = np.linspace(0.5, 2.5, se_t)     # range of the psd index to vary
+mass_fraction = M_BH_AGN/M_BH_response
 x = []
 y = []
+
 
 for ii in range(0, len(sh)) :
     globals()['resp_t'] = pd.read_csv('/Users/phxpc/Desktop/RF/Response/kynxilrev_100_45_%s_bands_lc.dat' % (sh[ii]), header = None, delim_whitespace=True, usecols=[0,1])
@@ -348,7 +352,7 @@ for j in range(0, len(yyn)):
 
 ffn,ppn=[],[]
 for j in range(0, len(yyn)):
-    fm=ff[j]/2 # freqency for 2*10^6 Msun   
+    fm=ff[j]/mass_fraction
     s, edges, _ = binned_statistic(fm, pp[j], statistic='mean',bins=np.arange(ff[j][0], ff[j][-1],  ff[j][2]-ff[j][1]))
     for ggg in range(len(s)) :
         if  math.isnan(s[ggg]) == True :
