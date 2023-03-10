@@ -1,5 +1,5 @@
 # Model description
-RanForPSD model is a Random Forest Regressor (RFR) model for mapping the X-ray coronal height based on the reverberation features that appear in the power spectral density (PSD) of AGN. It computes the PSD profiles in the form of a power-law where the reverberation effects due to the lamp-post source are imprinted on. The model requires the pre-computed impulse response (IR) functions of the X-ray source illuminating the accretion disc. The key model parameters include:
+Random Forest Regressor (RFR) model here is for mapping the X-ray coronal height based on the reverberation features that appear in the power spectral density (PSD) of AGN. It computes the PSD profiles in the form of a power-law where the reverberation effects due to the lamp-post source are imprinted on. The model requires the pre-computed impulse response (IR) functions of the X-ray source illuminating the accretion disc. The key model parameters include:
 - black hole mass --> pre-computed IR 
 - black hole spin --> pre-computed IR 
 - inclination --> pre-computed IR functions 
