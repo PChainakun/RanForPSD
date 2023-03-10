@@ -1,5 +1,5 @@
 # Model description
-Random Forest Regressor (RFR) model here is for mapping the X-ray coronal height based on the reverberation features that appear in the power spectral density (PSD) of AGN. It computes the PSD profiles in the form of a power-law where the reverberation effects due to the lamp-post source are imprinted on. The model requires the pre-computed impulse response (IR) functions of the X-ray source illuminating the accretion disc. The key model parameters include:
+Random Forest Regressor model (RFR_model) here is for mapping the X-ray coronal height based on the reverberation features that appear in the power spectral density (PSD) of AGN. It computes the PSD profiles in the form of a power-law where the reverberation effects due to the lamp-post source are imprinted on. The model requires the pre-computed impulse response (IR) functions of the X-ray source illuminating the accretion disc. The key model parameters include:
 - black hole mass --> pre-computed IR 
 - black hole spin --> pre-computed IR 
 - inclination --> pre-computed IR functions 
@@ -13,7 +13,7 @@ The simulated PSD data are rebinned so that their frequency range and bin-size a
 
 # Required files
 - "RFR_model" in the main repository directory
-- observed PSD data that we want to predict the coronal height
+- observed PSD data to predict the coronal height
 - pre-computed IR functions (e.g., from KYNxilrev model) - Note that the response functions provided in this GitHub is computed using the BH mass of 10^6 solar masses, the black hole spin a = 0.998 and the inclination i = 45 degrees.
 
 # ML Algorithms
